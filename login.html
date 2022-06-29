@@ -1,0 +1,35 @@
+
+<body >
+    <div class="centre">
+     <h1>Login Form</h1>
+     <form name="myform" onsubmit="return false">
+
+     <div class="txt_field">
+         <input type="text" name="uname"  id="user" ng-model="username"  ng-required="true" placeholder="Username"> 
+        
+
+
+     </div>
+     <div class="txt_field" >
+        <input type="password" name="password" id="pass" ng-model="password" ng-required="true" placeholder="Password">
+
+
+    </div>
+    <div class="pass" >Forgot Password?</div>
+    <br>
+    <div class="d-flex justify-content-center">
+    <button ng-click="login()" type="submit" ng-disabled="myform.$invalid" >Login</button>
+
+    </div>
+    <br>
+    <br>
+    </form>
+   <div ng-show="isLoading==true">
+       <span style="color: brown;">Loading Please Wait...</span>
+   </div>
+    </div>
+
+    
+</body>
+
+

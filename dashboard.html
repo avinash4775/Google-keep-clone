@@ -1,0 +1,49 @@
+
+  <body>
+ 
+    <div class="container" style="background-color: #202124;">
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne" style="background-color: #202124;">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <input type="text" class="form-control" id="validationTooltip01" placeholder="Enter Title" style="background-color: #202124; color:white;" required ng-model="title">
+              </button>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body" style="background-color: #202124;">
+
+              <div class="mb-3">
+                <label for="validationTextarea"></label>
+                <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Add Notes" required ng-model="note" style="background-color: #202124; color:white;"></textarea>
+                <div class="invalid-feedback">
+                  Please enter the notes here.
+                </div>
+                <button class="btn btn-dark" type="submit" ng-click="add()">Add</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      
+    </div>
+    </div><br>
+    <!-- view -->
+      <div class="container">
+    <div class="row row-cols-2 row-cols-md-4">
+        <div class="container" ng-repeat="x in values">
+         <div class="card text-white text-center bg-dark" style="width: 18rem;">
+
+        <h5 class="card-title">{{x.title}}</h5>
+        <p>S.Key={{x.Serial_key}}</p>
+        <h6 class="card-subtitle mb-2 text-white">{{x.description}}</h6>
+        <a ng-click="move(x.id)"><i class="fas fa-trash-alt"></i></a>
+        <p class="card-text"></p>
+    
+        </div>
+      </div>
+      </div>
+     </div>
+    
+  </body>

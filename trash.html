@@ -1,0 +1,22 @@
+<body>
+    
+    <!-- <ul>
+      
+      <li ng-repeat="x in data"> {{x.title+" :- "+x.description}}
+        <input type="button" ng-click="restore(x.id) " value="Restore"> 
+      <a ng-click="delete(x.id) "><i class="fas fa-trash-alt"></i></a></li>
+        
+   </ul> -->
+   <div class="row row-cols-1 row-cols-md-4">
+    <div class="container" ng-repeat="x in data">
+      <div class="card text-white bg-dark" style="width: 15rem; margin-left:30px">
+        <h5 class="card-title">{{x.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-white">{{x.description}}</h6>
+        <input type="button" style="width: min-content;" ng-click="restore(x.id) " value="Restore"> 
+        <a ng-click="delete(x.id)"><i class="fas fa-trash-alt"></i></a>
+        <p class="card-text"></p>
+    
+      </div>
+    </div>
+</div>
+</body>

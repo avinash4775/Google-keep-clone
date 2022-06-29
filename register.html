@@ -1,0 +1,68 @@
+
+<body ng-app="myApp" ng-controller="RegisterCtrl">
+   <div class="centre">
+    <h1>Register</h1>
+  
+    <form class="form" name="signupform" method="POST">
+        <div>
+            <div>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="First Name" ng-model="fname" ng-required="true"
+                    ng-minlength="3"><br>
+            </div>
+            <div>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Last Name" ng-model="lname" ng-required="true"
+                    ng-minlength="3"><br>
+            </div>
+            <div>
+                <label for="uname">Username:</label><br>
+                <input type="text" id="uname" name="uname" placeholder="Username" ng-model="uname" ng-required="true"
+                    ng-minlength="10"><br>
+            </div>
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Email" ng-model="mail" ng-required="true"
+                    ng-minlength="7"><br>
+            </div>
+            <div>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" placeholder="Password" ng-model="pass"
+                    ng-required="true" ng-minlength="6"><br>
+            </div>
+            <div>
+                <label for="cnfpassword">Confirm Password:</label><br>
+                <input type="password" id="cnfpassword" name="password" placeholder="Confirm Password"
+                    ng-model="cnfpass" ng-required="true" ng-minlength="6"><br>
+            </div>
+            <br>
+            <div>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select><br>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div class="row">
+                <div class="col-md-6">
+                     <button type="submit" ng-click="signup()" ng-disabled="signupform.$invalid">Submit</button>
+                </div>
+               <div class="col-md-6">
+                     <input type="reset" value="Reset" name="reset">
+               </div>
+                </div>
+            </div>  
+             <br>  
+                <div ng-show="isLoading==true">
+                    <span style="color: brown;">Registering Please Wait....</span>
+                    <br>
+                </div>
+            
+        </div>
+    </form>
+   </div>
+   
+</body>
